@@ -17,6 +17,7 @@ defmodule PoliticiansWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    resources "/politicians", PoliticianController
   end
 
   # Other scopes may use custom stacks.

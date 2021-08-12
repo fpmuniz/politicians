@@ -1,0 +1,13 @@
+<h1>Show Politician</h1>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @politician.name %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.politician_path(@conn, :edit, @politician) %></span>
+<span><%= link "Back", to: Routes.politician_path(@conn, :index) %></span>

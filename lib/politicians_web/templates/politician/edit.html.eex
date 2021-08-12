@@ -1,0 +1,5 @@
+<h1>Edit Politician</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.politician_path(@conn, :update, @politician)) %>
+
+<span><%= link "Back", to: Routes.politician_path(@conn, :index) %></span>

@@ -1,0 +1,26 @@
+<h1>Listing Politicians</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for politician <- @politicians do %>
+    <tr>
+      <td><%= politician.name %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.politician_path(@conn, :show, politician) %></span>
+        <span><%= link "Edit", to: Routes.politician_path(@conn, :edit, politician) %></span>
+        <span><%= link "Delete", to: Routes.politician_path(@conn, :delete, politician), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Politician", to: Routes.politician_path(@conn, :new) %></span>
