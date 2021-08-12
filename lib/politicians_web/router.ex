@@ -18,6 +18,7 @@ defmodule PoliticiansWeb.Router do
 
     get "/", PageController, :index
     resources "/politicians", PoliticianController
+    resources "/polls", PollController
   end
 
   # Other scopes may use custom stacks.
